@@ -12,6 +12,25 @@
     <url>https://spring-petclinic.github.io/</url>
 
     <properties>
+             <plugin>
+<groupId>org.jacoco</groupId>
+<artifactId>jacoco-maven-plugin</artifactId>
+<version>${jacoco-maven-plugin}</version>
+<executions>
+<execution>
+<goals>
+<goal>prepare-agent</goal>
+</goals>
+</execution>
+<execution>
+<id>report</id>
+<phase>prepare-package</phase>
+<goals>
+<goal>report</goal>
+</goals>
+</execution>
+</executions>
+</plugin>
 
         <!-- Generic properties -->
         <java.version>1.8</java.version>
